@@ -34,7 +34,7 @@ function loadDoc() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML = this.responseText;
     }
-    else{
+    else if(this.readyState == 4 && this.status != 200){
       alert("Invalid email or password")
     }
   };
